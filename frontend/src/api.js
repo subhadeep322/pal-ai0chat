@@ -1,7 +1,8 @@
+// frontend/src/api.js
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: process.env.REACT_APP_BACKEND_URL + '/api',
+  baseURL: '/api', // Works both locally (with proxy) and on Render
 });
 
 export const sendMessageToPAL = (message) =>
