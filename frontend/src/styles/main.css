@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+body {
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #00ffcc;
+  font-family: 'Orbitron', sans-serif;
+  margin: 0;
+  padding: 20px;
+  overflow-x: hidden;
+}
+
+.App {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 20px #00ffcc;
+  border: 2px solid #00ffcc;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+  animation: flicker 2s infinite;
+}
+
+.subtitle {
+  color: #ccc;
+  font-size: 1.1rem;
+}
+
+.pal-logo {
+  display: block;
+  margin: 0 auto 20px;
+  width: 160px;
+  filter: drop-shadow(0 0 10px #0ff);
+}
+
+.mitchell-family {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 30px;
+  box-shadow: 0 0 10px #0ff;
+}
+
+.chat-container {
+  margin-top: 30px;
+  background: #111;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #00ffcc;
+}
+
+.chat-box {
+  background: rgba(0, 0, 0, 0.3); /* transparent black */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 20px;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  text-align: center;
+  border: 1px solid #00ffff66;
+  box-shadow: 0 0 15px #00ffff33;
+}
+
+.message.user {
+  color: #00ffff;
+  font-weight: bold;
+}
+
+.message.pal {
+  color: #ff00ff;
+  font-style: italic;
+}
+
+.chat-input {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #0ff;
+  background: #000;
+  color: #0ff;
+  outline: none;
+  border-radius: 5px;
+}
+
+.chat-input button {
+  padding: 10px;
+  background: #00ffcc;
+  color: black;
+  border: none;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.chat-input button:hover {
+  background: #0ff;
+}
+
+.quiz-container {
+  margin-top: 40px;
+  padding: 15px;
+  border: 1px solid #0ff;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 10px #00ffcc;
+}
+
+.quiz-container label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.music-toggle {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.music-toggle button {
+  padding: 10px 15px;
+  background: #00ff99;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.3s;
+  box-shadow: 0 0 10px #0f0;
+}
+
+.music-toggle button:hover {
+  background: #00ffaa;
+}
+
+.result {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: yellow;
+}
+
+.glitch-effect {
+  position: relative;
+  color: #0ff;
+  font-size: 2.5rem;
+  font-weight: bold;
+  animation: glitch 1s infinite;
+  text-shadow: 2px 2px red, -2px -2px blue;
+  text-align: center;
+  margin: 20px 0;
+  text-transform: uppercase;
+}
+
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(2px, -2px); }
+  60% { transform: translate(-2px, -2px); }
+  80% { transform: translate(2px, 2px); }
+  100% { transform: translate(0); }
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.85; }
+  75% { opacity: 0.5; }
+}

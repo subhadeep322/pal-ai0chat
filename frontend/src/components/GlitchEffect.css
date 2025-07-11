@@ -1,0 +1,80 @@
+/* src/components/GlitchEffect.css */
+.glitch-text {
+  font-size: 2rem;
+  color: #00ffff;
+  position: relative;
+  text-shadow: 0 0 2px #00ffff, 0 0 6px #00ffff;
+  animation: flicker 2s infinite linear;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0.7;
+}
+
+.glitch-text::before {
+  color: #ff00ff;
+  z-index: -1;
+  animation: glitchBefore 1s infinite linear;
+}
+
+.glitch-text::after {
+  color: #00ffff;
+  z-index: -1;
+  animation: glitchAfter 1.2s infinite linear;
+}
+
+@keyframes glitchBefore {
+  0% {
+    transform: translate(-2px, 0);
+  }
+  20% {
+    transform: translate(2px, 2px);
+  }
+  40% {
+    transform: translate(-1px, -1px);
+  }
+  60% {
+    transform: translate(1px, 1px);
+  }
+  80% {
+    transform: translate(-2px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes glitchAfter {
+  0% {
+    transform: translate(2px, 0);
+  }
+  20% {
+    transform: translate(-2px, -2px);
+  }
+  40% {
+    transform: translate(1px, 1px);
+  }
+  60% {
+    transform: translate(-1px, -1px);
+  }
+  80% {
+    transform: translate(2px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    opacity: 1;
+  }
+  20%, 22%, 24%, 55% {
+    opacity: 0.4;
+  }
+}

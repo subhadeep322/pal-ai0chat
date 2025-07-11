@@ -1,0 +1,32 @@
+/* src/components/FloatingBot.css */
+.floating-bot-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.floating-bot-image {
+  width: 160vw;
+  height: 160vh;
+  object-fit: cover;
+  animation: floatBot 6s ease-in-out infinite alternate;
+  filter: blur(2px) drop-shadow(0 0 40px #00ffffaa);
+  opacity: 0.4;
+}
+
+@keyframes floatBot {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  100% {
+    transform: scale(1.05) rotate(2deg);
+  }
+}
